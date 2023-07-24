@@ -10,7 +10,7 @@ interface XButtonProps {
 }
 
 const XButton = styled.button<XButtonProps>`
-  height: 32px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
