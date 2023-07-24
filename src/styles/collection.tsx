@@ -1,0 +1,15 @@
+import styled from '@emotion/styled/macro'
+
+export const Title = styled.h2`
+  font-weight: 400;
+`
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`

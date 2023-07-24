@@ -1,0 +1,10 @@
+schema:
+  - "https://graphql.anilist.co" 
+documents:
+  - "./src/**/*.{ts,tsx}"
+generates:
+  ./src/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
