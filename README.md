@@ -1,13 +1,13 @@
 # Hello!
 
 This is my first project using Graphql and Emotion CSS Framework.
- 
-Stack: React Hooks
-API: Graphql [https://graphql.anilist.co] & Apollo Client
-CSS Framework: Emotion
-State Management: React Context
 
-You can also access this project from [https://anime-collection-4299d.firebaseapp.com/]
+Stack: React Hooks\
+API: Graphql [Anilist API](https://graphql.anilist.co) & Apollo Client\
+CSS Framework: Emotion\
+State Management: React Context\
+
+You can also access this project from [here](https://anime-collection-4299d.firebaseapp.com/)
 
 ## Available Scripts
 
