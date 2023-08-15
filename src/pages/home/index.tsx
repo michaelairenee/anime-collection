@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useQuery } from '@apollo/client'
 import {
   GetAnimeListQuery,
@@ -25,13 +25,26 @@ const Home: React.FC = () => {
   const animes = data?.Page?.media
   const pageCount = data?.Page?.pageInfo?.lastPage ?? 1
 
+  useEffect(() => {
+    scrolling()
+  }, [])
+
+  const scrolling = () => {
+    window.addEventListener('scroll', () => {
+      console.log(document.documentElement.scrollTop)
+      if (document.documentElement.scrollTop === 200) {
+        setCurrentPage(currentPage + 1)
+      }
+    })
+  }
+
   if (loading) return <div>Loading...</div>
 
   return (
-    <>
+    <div id="page">
       <Title>Anime</Title>
 
-      <Grid>
+      <Grid id="anime">
         {animes &&
           animes.map((anime) => (
             <AnimeContainer key={anime?.id} anime={anime!} />
@@ -45,7 +58,7 @@ const Home: React.FC = () => {
           setCurrentPage={setCurrentPage}
         />
       </Footer>
-    </>
+    </div>
   )
 }
 
